@@ -149,5 +149,3 @@ def load_and_clean_data():
     check_negative_and_outliers(data3, 'GHI', expected_range=(0, 1000))
 
     return data1, data2, data3
-
-load_and_clean_data()
