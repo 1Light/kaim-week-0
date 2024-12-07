@@ -1,10 +1,15 @@
+import os
 import pandas as pd
 
 def load_and_clean_data():
-    # Load the datasets
-    data1 = pd.read_csv('../data/benin-malanville.csv')
-    data2 = pd.read_csv('../data/sierraleone-bumbuna.csv')
-    data3 = pd.read_csv('../data/togo-dapaong_qc.csv')
+
+    # Get the absolute path to the data folder
+    base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
+    
+    # Read the CSV files using the absolute path
+    data1 = pd.read_csv(os.path.join(base_path, 'benin-malanville.csv'))
+    data2 = pd.read_csv(os.path.join(base_path, 'sierraleone-bumbuna.csv'))
+    data3 = pd.read_csv(os.path.join(base_path, 'togo-dapaong_qc.csv'))
 
     """
     # Print the first few rows of each data set to verify successful load
