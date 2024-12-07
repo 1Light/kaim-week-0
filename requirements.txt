@@ -4,3 +4,4 @@ matplotlib
 seaborn
 streamlit
 windrose
+scikit-learn
