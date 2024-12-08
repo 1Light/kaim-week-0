@@ -1,15 +1,45 @@
-import os
+import gdown
 import pandas as pd
+import os
+
+def download_from_gdrive(file_id, output_path):
+    url = f"https://drive.google.com/uc?id={file_id}"
+    gdown.download(url, output_path, quiet=False)
 
 def load_and_clean_data():
 
-    # Get the absolute path to the data folder
-    base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
+    file_ids = {
+        "benin": "1fpqN0RjgTaXGcz-LoueOy0nlvGa_BbWV",  
+        "sierraleone": "1uV5DbK2XOHdzYZewJw31nxSuFuOCOZ9B",  
+        "togo": "1UFoqU5jN6OYt64Fy0kpFYrzj3pITXMQR"  
+    }
+
+    # Define local paths to save the data temporarily
+    base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp_data'))
+    os.makedirs(base_path, exist_ok=True)  
     
-    # Read the CSV files using the absolute path
-    data1 = pd.read_csv(os.path.join(base_path, 'benin-malanville.csv'))
-    data2 = pd.read_csv(os.path.join(base_path, 'sierraleone-bumbuna.csv'))
-    data3 = pd.read_csv(os.path.join(base_path, 'togo-dapaong_qc.csv'))
+    # Define file paths for each dataset
+    benin_path = os.path.join(base_path, 'benin-malanville.csv')
+    sierraleone_path = os.path.join(base_path, 'sierraleone-bumbuna.csv')
+    togo_path = os.path.join(base_path, 'togo-dapaong_qc.csv')
+
+    # Download files only if they don't exist
+    if not os.path.exists(benin_path):
+        print("Downloading Benin data...")
+        download_from_gdrive(file_ids["benin"], benin_path)
+
+    if not os.path.exists(sierraleone_path):
+        print("Downloading Sierra Leone data...")
+        download_from_gdrive(file_ids["sierraleone"], sierraleone_path)
+
+    if not os.path.exists(togo_path):
+        print("Downloading Togo data...")
+        download_from_gdrive(file_ids["togo"], togo_path)
+    
+    # Load the data (after confirming they are downloaded)
+    data1 = pd.read_csv(benin_path)
+    data2 = pd.read_csv(sierraleone_path)
+    data3 = pd.read_csv(togo_path)
 
     """
     # Print the first few rows of each data set to verify successful load
