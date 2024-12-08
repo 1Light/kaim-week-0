@@ -78,10 +78,10 @@ A dynamic **Streamlit dashboard** was developed to allow users to interact with 
 
 ## Results & Interpretation
 
-The analysis provided valuable insights into the potential for solar energy investments in each region:
-- **Malanville (Benin)** exhibited high GHI values throughout the year, making it a prime location for solar installations.
-- **Bumbuna (Sierra Leone)** showed fluctuations in solar radiation, with peaks observed during certain months, suggesting a need for more targeted installations.
-- **Dapaong QC (Togo)** had a stable solar irradiance pattern, with moderate temperature and wind conditions, making it a viable region for year-round solar energy production.
+- **Wind Energy**: Low wind speeds in Benin and Sierra Leone suggest limited potential for wind turbines without hybrid systems. Togo shows promise with moderate wind speeds.
+- **Solar Energy**: High GHI and DNI values across all regions, particularly in spring and winter months, underline the viability of photovoltaic systems and CSP systems.
+- **Environmental Conditions**: The temperature and humidity trends indicate the need for heat and moisture-resistant materials for solar panels, particularly in Sierra Leone.
+- **Seasonality**: Variations in solar and wind metrics over months highlight the importance of seasonal planning for energy systems.
 
 ## Installation and Setup
 
