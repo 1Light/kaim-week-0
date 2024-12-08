@@ -57,7 +57,7 @@ This project focuses on providing insights from solar energy data to help MoonLi
 - **Streamlit**: For dashboard development and data visualization.
 - **Pandas & NumPy**: For data manipulation and cleaning.
 - **Matplotlib & Seaborn**: For data visualization (plots, histograms, pair plots, etc.).
-- **Jupyter Notebook**: For code development and initial analysis.
+- **VSCode**: For code development and initial analysis.
 
 ## Data Analysis & Insights
 
