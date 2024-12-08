@@ -20,6 +20,9 @@ The main objectives of this project were:
 7. [Contributions](#contributions)
 8. [Licenses](#licenses)
 
+### Access the Deployed Dashboard
+Explore the live, interactive dashboard here: [Streamlit App](https://kaim-week-0.streamlit.app/)
+
 ## Project Understanding
 
 This project focuses on providing insights from solar energy data to help MoonLight Energy Solutions choose optimal locations for solar panel installations. It involves a series of tasks, including:
